@@ -155,7 +155,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
                 }`}>
                 <img
                   ref={imageRef}
-                  src="../public/anjali-profile.png"
+                  src="/anjali-profile.png"
                   alt="Anjali Parmar"
                   className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-1000"
                 />
