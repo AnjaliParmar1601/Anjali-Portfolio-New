@@ -7,7 +7,7 @@ export const SOCIAL_LINKS = {
   github: "https://github.com/AnjaliParmar1601",
   phone: "+91 7874048186",
   whatsapp: "https://wa.me/917874048186?text=Hi%20Anjali,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!",
-  resume: "/anjali-parmar.pdf" // Placeholder for actual resume file
+  resume: "/Anjali_Parmar_Resume.pdf" // Placeholder for actual resume file
 };
 
 export const EXPERIENCE_DATA: Experience[] = [
