@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://lucide.dev/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anjali Parmar | Frontend Engineer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Rajdhani', 'sans-serif'],
+              display: ['Orbitron', 'sans-serif'],
+            },
+            colors: {
+              space: {
+                900: '#06080B', // Deep cosmic charcoal
+                800: '#0B1016',
+              },
+              neon: {
+                teal: '#00F0FF',
+                aqua: '#4EF0FF',
+                blue: '#00A3FF',
+              },
+              light: {
+                bg: '#F4F7F9',
+              }
+            },
+            backgroundImage: {
+              'glass-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)',
+              'glass-gradient-light': 'linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%)',
+            },
+            animation: {
+              'scan': 'scan 2.5s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              scan: {
+                '0%': { transform: 'translateX(-150%) skewX(-20deg)' },
+                '100%': { transform: 'translateX(250%) skewX(-20deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+      // Initialize theme: LocalStorage > System Preference > Default Dark
+      (function() {
+        const storedTheme = localStorage.getItem('theme');
+        const systemLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+        if (storedTheme === 'light' || (!storedTheme && systemLight)) {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #06080B;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00F0FF;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4EF0FF;
+      }
+      
+      section {
+        scroll-margin-top: 80px; /* Offsets for the fixed header height */
+      }
+
+      .text-glow {
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+      }
+      
+      .glass-card {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react": "https://esm.sh/react@^19.2.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@^3.14.1/ScrollTrigger",
+    "gsap/": "https://esm.sh/gsap@^3.14.1/",
+    "gsap": "https://esm.sh/gsap@^3.14.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-light-bg dark:bg-space-900 text-slate-900 dark:text-white transition-colors duration-500 overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
